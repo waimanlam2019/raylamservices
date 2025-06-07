@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/customers")
 public record CustomerController(CustomerService customerService) {
-    private static final Logger log = LoggerFactory.getLogger(CustomerController.class);
 
     @PostMapping
     public void registerCustomer(@RequestBody CustomerRegistrationRequest customerRegistrationRequest){
