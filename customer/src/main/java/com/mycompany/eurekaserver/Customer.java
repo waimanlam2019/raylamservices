@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.eurekaserver;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

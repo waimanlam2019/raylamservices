@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.eurekaserver;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
