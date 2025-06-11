@@ -2,6 +2,8 @@ package com.mycompany.customer;
 
 import com.mycompany.clients.FraudCheckResponse;
 import com.mycompany.clients.FraudClient;
+import com.mycompany.clients.NotificationClient;
+import com.mycompany.clients.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -11,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 public class CustomerService {
     private final CustomerRepository customerRepository;
     private final FraudClient fraudClient;
+    private final NotificationClient notificationClient;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder()
@@ -29,10 +32,7 @@ public class CustomerService {
             throw new IllegalStateException("fraudster");
         }
 
-        //todo send notification
-        //NotificationRequest notificationRequest = new NotificationRequest(customer.getId(), customer.getFirstName()+customer.getLastName(), "Account created");
-        //restTemplate.postForObject("http://NOTIFICATION/api/v1/notification/", notificationRequest, Void.class);
-
+        notificationClient.sendNotification(new NotificationRequest(customer.getId(), customer.getFirstName()+customer.getLastName(), "Account created"));
 
     }
 }
