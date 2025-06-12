@@ -1,0 +1,82 @@
+# Compiled source files
+*.class
+
+# Log files
+*.log
+
+# Blueprints (IDE specific)
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.project
+.classpath
+.settings/
+
+# Build directories
+/target/
+/bin/
+/out/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Maven specific
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+# Environment files
+.env
+*.env
+
+# IntelliJ cache
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+*.launch
+.metadata
+*.bak
+*.tmp
+*.swp
+
+# Test reports
+/test-output/
+/surefire-reports/
+/jacoco.exec
+
+# Generated files
+*.war
+*.jar
+*.ear
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Spring Boot devtools
+.spring-boot-devtools.properties
+.spring-boot-devtools.restart.enabled
+
+# Database
+*.h2.db
+*.mv.db
+*.trace.db
+
+# Local configuration
+application-local.yml
+application-dev.yml
+application-local.properties
+application-dev.properties
+
+# Docker
+docker-compose.override.yml
+*.pid
